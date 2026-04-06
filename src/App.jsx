@@ -1,7 +1,7 @@
  import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Form from './components/Form'
-import ListGroup from './components/ListGroup.jsx'
+import ListGroup from './components/ListGroup'
 
 const App = () => {
 

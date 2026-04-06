@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Form from './components/Form'
-
-import ListGroup from './components/Listgroup'
+import ListGroup from './components/ListGroup'
 
 const App = () => {
 
@@ -58,4 +57,4 @@ const updateTodo =(updatedTodo) =>{
   )
 }
 
-export default App
+export default App;

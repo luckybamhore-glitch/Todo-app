@@ -29,3 +29,41 @@ const Form = ({addTodo, edit, updateTodo}) => {
 };
 
 export default Form;
+
+
+// import React, { useState } from "react";
+
+// const Form = ({ addTodo }) => {
+//   const [text, setText] = useState("");
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     if (!text.trim()) return;
+
+//     addTodo({
+//       id: crypto.randomUUID(),
+//       text,
+//     });
+
+//     setText("");
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit} className="border p-4 mb-4">
+//       <input
+//         type="text"
+//         value={text}
+//         onChange={(e) => setText(e.target.value)}
+//         className="border p-2 w-full mb-2"
+//         placeholder="Enter todo..."
+//       />
+
+//       <button className="bg-green-500 text-white w-full p-2 rounded">
+//         Add Todo
+//       </button>
+//     </form>
+//   );
+// };
+
+// export default Form;

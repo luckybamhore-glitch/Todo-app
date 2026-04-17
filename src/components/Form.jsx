@@ -1,16 +1,28 @@
-import React ,{useEffect, useState} from 'react'
+import React ,{useContext, useEffect, useState} from 'react'
+import TodoContext from '../context/TodoContext';
 
 
-const Form = ({addTodo, edit, updateTodo}) => {
+const Form = () => {
+
+   const  {dispatch, edit, updateTodo} = useContext(TodoContext)
 
 
     const [text , setText] = useState("")
 
      const handleSubmit = (e) =>{
         e.preventDefault()
+
+
         !edit.isEdit ?
-        addTodo( {id : crypto.randomUUID() , text}):
-         updateTodo({id: edit.todo.id , text })
+        dispatch({
+         type: "ADD_TODO",
+         payload: {id : crypto.randomUUID() , text}
+        }):
+
+         dispatch({
+            type : "UPDATE_TODO",
+            payload : {id: edit.todo.id , text }
+         })
         setText("")
      }
 
